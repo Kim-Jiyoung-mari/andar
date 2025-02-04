@@ -19,7 +19,7 @@
 .h_bg header .h_left nav > ul > li:last-child{margin: 0;}
 .h_bg header .h_left nav > ul > li > a {}
 .h_bg header .h_left nav ul li .sub_bg {
-    background-color: #FFF;
+    background-color: #FFF; z-index: 999;
     position: absolute; left: 0; top: 100px; width: 100%; height: 500px;
     transform: translateY(-30px); opacity: 0;
     height: 0; overflow: hidden;
@@ -63,3 +63,81 @@
 }
 .h_bg header .h_right a img {}
 /* =================================================== 푸터 */
+footer {background-color: #F5F5F5; padding: 30px 0;}
+footer .ft_bg {
+    width: 1400px; margin: 0 auto;
+}
+footer .ft_bg .ft_top {
+    padding: 0 10px 20px;
+    border-bottom: 1px solid #CCC;
+}
+footer .ft_bg .ft_top > a {
+    font-size: 0.69rem; line-height: 1.2; letter-spacing: -0.02rem;
+}
+footer .ft_bg .ft_top > a::after{
+    content: ''; display: inline-block;
+    width: 1px; height: 11px; background-color: #000;
+    margin: 0 7px; position: relative; top: 1px;
+}
+footer .ft_bg .ft_btm .btm_left ul li:last-child:after,
+footer .ft_bg .ft_top > a:last-child:after {display: none;}
+footer .ft_bg .ft_btm {
+    display: flex; flex-flow: row nowrap; justify-content: space-between;
+    padding: 30px 10px 0;
+}
+footer .ft_bg .ft_btm .btm_left {}
+footer .ft_bg .ft_btm .btm_left ul {}
+footer .ft_bg .ft_btm .btm_left ul li {
+    display: inline-block;
+    font-size: 0.69rem; line-height: 1.2; letter-spacing: -0.02rem;
+}
+footer .ft_bg .ft_btm .btm_left ul li::after{
+    content: ''; display: inline-block;
+    width: 1px; height: 11px; background-color: #000;
+    margin: 0 7px; position: relative; top: 1px;
+}
+footer .ft_bg .ft_btm .btm_left ul li:nth-child(2) {padding: 7px 0;}
+footer .ft_bg .ft_btm .btm_left > p {
+    font-size: 0.69rem; line-height: 1.2; letter-spacing: -0.02rem;
+    padding-top: 30px;
+}
+footer .ft_bg .ft_btm .btm_right {
+    width: 400px;
+}
+footer .ft_bg .ft_btm .btm_right > p {
+    font-size: 0.69rem; line-height: 1.2; letter-spacing: -0.02rem;
+}
+footer .ft_bg .ft_btm .btm_right .cs_info {
+    background-image: url(../images/ft_logo.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+footer .ft_bg .ft_btm .btm_right .cs_info .cs {
+    padding: 15px 0;
+}
+footer .ft_bg .ft_btm .btm_right .cs_info .cs > p {
+    font-size: 0.94rem; font-weight: 500; letter-spacing: -0.02rem;
+}
+footer .ft_bg .ft_btm .btm_right .cs_info .cs > .title {
+    font-size: 0.88rem; letter-spacing: -0.02rem;
+    padding-bottom: 10px;
+}
+footer .ft_bg .ft_btm .btm_right .cs_info .time > p {
+    font-size: 0.69rem; line-height: 1.2; letter-spacing: -0.02rem;
+}
+footer .ft_bg .ft_btm .btm_right .sns {
+    display: flex; flex-flow: row nowrap; 
+    justify-content: space-between; align-items: center;
+    padding-top: 15px;
+}
+footer .ft_bg .ft_btm .btm_right .sns .sns_left {}
+footer .ft_bg .ft_btm .btm_right .sns .sns_left > a {}
+footer .ft_bg .ft_btm .btm_right .sns .sns_left > a:nth-child(2),
+footer .ft_bg .ft_btm .btm_right .sns .sns_right > p {padding: 0 17px;}
+footer .ft_bg .ft_btm .btm_right .sns .sns_left > a > img {}
+footer .ft_bg .ft_btm .btm_right .sns .sns_right {}
+footer .ft_bg .ft_btm .btm_right .sns .sns_right > a {
+    \float: left;}
+footer .ft_bg .ft_btm .btm_right .sns .sns_right > a > img {}
+footer .ft_bg .ft_btm .btm_right .sns .sns_right > p {float: left;}
+footer .ft_bg .ft_btm .btm_right .sns .sns_right > p > img {}
