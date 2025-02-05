@@ -18,7 +18,7 @@
     margin: 0 20px; float: left;
 }
 .h_bg header .h_left nav > ul > li:last-child{margin: 0;}
-.h_bg header .h_left nav > ul > li > a {}
+.h_bg header .h_left nav > * li:nth-child(2) a {color: #C86733;}
 .h_bg header .h_left nav ul li .sub_bg {
     background-color: #FFF; z-index: 999;
     position: absolute; left: 0; top: 109px; width: 100%; height: 500px;
@@ -63,6 +63,64 @@
     margin: 0 15px;
 }
 .h_bg header .h_right a img {}
+/* =================================================== 배너 */
+main {position: relative;}
+main .main_swiper {
+    background-color: lightgray;
+    width: 100%; height: 950px; margin: 0 auto;
+}
+main .main_swiper .swiper-wrapper {position: relative;}
+main .main_swiper .swiper-wrapper .swiper-slide {
+    background-size: cover;
+    background-position: center;
+    position: relative;    
+}
+/* 배너 공통 디자인 */
+main .main_swiper .swiper-wrapper .swiper-slide > * {
+    width: 1400px; position: absolute; left: 50%;
+    transform: translateX(-50%);
+    bottom: 398px;
+}
+main .main_swiper .swiper-wrapper .swiper-slide > * h1,
+main .main_swiper .swiper-wrapper .swiper-slide > * h1 span {
+    font-size: 3.13rem; font-weight: 600; letter-spacing: -0.02rem;
+}
+main .main_swiper .swiper-wrapper > * .contents p {
+    margin: 20px 0;
+    font-size: 1.25rem; font-weight: 600; letter-spacing: -0.02rem;
+}
+main .main_swiper .swiper-wrapper .swiper-slide > * h1 span {color: #C86733;}
+main .main_swiper .swiper-wrapper > * .btn_link {
+    display: inline-block;
+    border: 1px solid #C86733; border-radius: 10px;
+    padding: 15px;
+    color: #C86733;
+    font-size: 0.94rem; font-weight: 500; letter-spacing: -0.02rem;
+}
+/* 배너 개별 디자인 */
+main .main_swiper .swiper-wrapper .slide1 {
+    background-image: url(../images/bnr_001.jpg);
+}
+main .main_swiper .swiper-wrapper .slide1 .contents {}
+main .main_swiper .swiper-wrapper .slide1 .contents .sub_title {}
+main.main_swiper .swiper-wrapper .slide1 .contents .sub_title span {}
+main .main_swiper .swiper-wrapper .slide1 .contents p {}
+main .main_swiper .swiper-wrapper .slide1 .contents .btn_link {}
+main .main_swiper .swiper-wrapper .slide2 {
+    background-image: url(../images/bnr_002.jpg);
+}
+main .main_swiper .swiper-wrapper .slide2 .contents {}
+main .main_swiper .swiper-wrapper .slide2 .contents .sub_title {}
+main .main_swiper .swiper-wrapper .slide2 .contents p {
+    line-height: 1.5;
+}
+main .main_swiper .swiper-wrapper .slide2 .contents .btn_link {}
+main .main_swiper .swiper-pagination-bullet {
+    background-color: blue; opacity: 0.5;
+}
+main .main_swiper .swiper-pagination-bullet-active {
+    background-color: #C86733; opacity: 1;
+}
 /* =================================================== 푸터 */
 footer {background-color: #F5F5F5; padding: 30px 0;}
 footer .ft_bg {
