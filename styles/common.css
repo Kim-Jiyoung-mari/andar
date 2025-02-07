@@ -1,7 +1,7 @@
 /* =================================================== 헤더 */
 .h_bg {}
 .h_bg header {
-    padding: 20px 80px;
+    padding: 0 80px; height: 80px;
     display: flex; flex-flow: row nowrap; justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #DEDEDE;
@@ -15,13 +15,14 @@
 .h_bg header .h_left nav {}
 .h_bg header .h_left nav > ul {}
 .h_bg header .h_left nav > ul > li {
-    margin: 0 20px; float: left;
+    margin: 0 20px; float: left; height: 80px;
+    display: flex; align-items: center;
 }
 .h_bg header .h_left nav > ul > li:last-child{margin: 0;}
 .h_bg header .h_left nav > * li:nth-child(2) a {color: #C86733;}
 .h_bg header .h_left nav ul li .sub_bg {
     background-color: #FFF; z-index: 999;
-    position: absolute; left: 0; top: 109px; width: 100%; height: 500px;
+    position: absolute; left: 0; top: 80px; width: 100%; height: 500px;
     transform: translateY(-30px); opacity: 0;
     height: 0; overflow: hidden;
     transition: tranform 0.3s, opacity 0.3s;
