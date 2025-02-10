@@ -213,9 +213,11 @@ main .m_row .c_swiper .swiper-wrapper .item-wrap2 .item .item_info .i_txt {}
 main .m_row .c_swiper .swiper-wrapper .item-wrap2 .item .item_info .price {}
 main .m_row .c_swiper .swiper-wrapper .item-wrap2 .item .item_info .price del {}
 /* =================================================== 5행 개별 */
-main .row5 {width: 100%;}
+main .row5 {
+    background-color: aqua; 
+    width: 100%; height: 2700px;
+}
 main .row5 .row5_bg {
-    position: sticky; top: 0; height: 50px;
     background-color: rgba(255, 255, 255, 0.5);
 }
 main .row5 .row5_bg .row5_title {
@@ -244,20 +246,23 @@ main .row5 .row5_bg .row5_title .row5_tab > .active {
 }
 main .row5 .row5_contents {
     display: flex; flex-flow: row nowrap; justify-content: space-between;
-    margin: 0 80px;
+    margin: 0 80px; 
 }
-main .row5 .row5_contents .right {
+main .row5 .row5_contents .right_bg {
+    background-color: pink; 
+}
+main .row5 .row5_contents .right_bg .right {
     background-image: url(../images/row5_main.jpg);
     width: 490px; height: 900px;
     background-size: cover; background-position: center;
-    position: relative;
+    position: sticky; top: 80px;
 }
-main .row5 .row5_contents .right > a {
+main .row5 .row5_contents .right_bg .right > a {
     position: absolute; bottom: 40px; right: 45px;
     font-size: 1.56rem; font-weight: 600; letter-spacing: -0.02rem;
     color: #FFF; 
 }
-main .row5 .row5_contents .right > a > img {
+main .row5 .row5_contents .right_bg .right > a > img {
     display: block; padding-top: 10px;
 }
 main .row5 .row5_contents .left_list {

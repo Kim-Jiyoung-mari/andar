@@ -1,10 +1,14 @@
 /* =================================================== 헤더 */
-.h_bg {}
+.h_bg {
+    position: fixed; z-index: 999; width: 100%;
+    background-color: rgba(255, 255, 255, 100);
+}
 .h_bg header {
     padding: 0 80px; height: 80px;
     display: flex; flex-flow: row nowrap; justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE; 
+    
 }
 .h_bg header .h_left {
     display: flex; flex-flow: row nowrap; align-items: center;
