@@ -1,14 +1,14 @@
-document.querySelectorAll('main > * a').forEach(a => {
-    a.addEventListener('click', (e) => {
-        e.preventDefault();
-    });
-});
+// document.querySelectorAll('main > * a').forEach(a => {
+//     a.addEventListener('click', (e) => {
+//         e.preventDefault();
+//     });
+// });
 
-document.querySelectorAll('nav > * a').forEach(a => {
-    a.addEventListener('click', (e) => {
-        e.preventDefault();
-    });
-});
+// document.querySelectorAll('nav > * a').forEach(a => {
+//     a.addEventListener('click', (e) => {
+//         e.preventDefault();
+//     });
+// });
 
 const mainSwiper = new Swiper('.main_swiper',{
     autoplay:{
@@ -45,11 +45,11 @@ const allSwiper = new Swiper('.all .c_swiper2',{
     },
     loop:true,
     scrollbar: {
-        el: " .row3 .progress .swiper-scrollbar",
+        el: " .all .progress .swiper-scrollbar",
     },
     navigation: {
-        nextEl: ".row3 .s_btn .next",
-        prevEl: ".row3 .s_btn .prev",
+        nextEl: ".all .all_new .next",
+        prevEl: ".all .all_new .prev",
     }
 });
 const womanSwiper = new Swiper('.womanz .c_swiper2',{
@@ -58,11 +58,11 @@ const womanSwiper = new Swiper('.womanz .c_swiper2',{
     },
     loop:true,
     scrollbar: {
-        el: " .row3 .woman .swiper-scrollbar",
+        el: " .womanz .woman .swiper-scrollbar",
     },
     navigation: {
-        nextEl: ".row3 .s_btn .next",
-        prevEl: ".row3 .s_btn .prev",
+        nextEl: ".womanz .woman .next",
+        prevEl: ".womanz .woman .prev",
     }
 });
 
@@ -72,11 +72,11 @@ const manSwiper = new Swiper('.manz .c_swiper2',{
     },
     loop:true,
     scrollbar: {
-        el: " .row3 .man .swiper-scrollbar",
+        el: " .manz .man .swiper-scrollbar",
     },
     navigation: {
-        nextEl: ".row3 .s_btn .next",
-        prevEl: ".row3 .s_btn .prev",
+        nextEl: ".manz .man .next",
+        prevEl: ".manz .man .prev",
     }
 });
 
@@ -86,11 +86,11 @@ const underSwiper = new Swiper('.under .c_swiper2',{
     },
     loop:true,
     scrollbar: {
-        el: " .row3 .wear .swiper-scrollbar",
+        el: " .under .wear .swiper-scrollbar",
     },
     navigation: {
-        nextEl: ".row3 .s_btn .next",
-        prevEl: ".row3 .s_btn .prev",
+        nextEl: ".under .wear .next",
+        prevEl: ".under .wear .prev",
     }
 });
 
@@ -104,14 +104,15 @@ const underSwiper = new Swiper('.under .c_swiper2',{
 const tabC = document.querySelectorAll('.row3 .tab_container > div');
 const tabT = document.querySelectorAll('.row3 .t_btm .item_tab a');
 console.log(tabC, tabT);
-for(let i of tabC){
-    function tabCHide (){ /* 탭내용 모두 숨기기용 함수 : 생성 */
-        for(let i of tabC) i.style.display = 'none';
-    }
+
+function tabCHide (){ /* 탭내용 모두 숨기기용 함수 : 생성 */
+    for(let i of tabC) i.style.display = 'none';
 }
+
 function tabClsReset(){/* 클래스 초기화 함수 : 생성 */
     for(let i of tabT) i.classList.remove('active');
 }
+
 tabCHide();
 tabClsReset();
 
@@ -136,9 +137,6 @@ tabT.forEach((target,index)=>{
     })
 })
 
-
-
-
 // =====================================================  4행 베스트셀러
 const beallSwiper = new Swiper('.best_all .c_swiper3',{
     autoplay:{
@@ -149,8 +147,8 @@ const beallSwiper = new Swiper('.best_all .c_swiper3',{
         el: " .row4 .be_all .swiper-scrollbar",
     },
     navigation: {
-        nextEl: ".row4 .s_btn .next",
-        prevEl: ".row4 .s_btn .prev",
+        nextEl: ".be_all  .next",
+        prevEl: ".be_all  .prev",
     }
 });
 
@@ -163,8 +161,8 @@ const bewomanSwiper = new Swiper('.best_woman .c_swiper3',{
         el: " .row4 .be_woman .swiper-scrollbar",
     },
     navigation: {
-        nextEl: ".row4 .s_btn .next",
-        prevEl: ".row4 .s_btn .prev",
+        nextEl: ".be_woman .next",
+        prevEl: ".be_woman .prev",
     }
 });
 
@@ -177,8 +175,8 @@ const bemanSwiper = new Swiper('.best_man .c_swiper3',{
         el: " .row4 .be_man .swiper-scrollbar",
     },
     navigation: {
-        nextEl: ".row4 .s_btn .next",
-        prevEl: ".row4 .s_btn .prev",
+        nextEl: ".be_man .next",
+        prevEl: ".be_man .prev",
     }
 });
 
@@ -191,22 +189,8 @@ const bejuSwiper = new Swiper('.best_juni .c_swiper3',{
         el: " .row4 .be_juni .swiper-scrollbar",
     },
     navigation: {
-        nextEl: ".row4 .s_btn .next",
-        prevEl: ".row4 .s_btn .prev",
-    }
-});
-
-const beaccSwiper = new Swiper('.best_acc .c_swiper3',{
-    autoplay:{
-        delay:5000, // 실제 배너 5~7초 많이 사용
-    },
-    loop:true,
-    scrollbar: {
-        el: " .row4 .be_acc .swiper-scrollbar",
-    },
-    navigation: {
-        nextEl: ".row4 .s_btn .next",
-        prevEl: ".row4 .s_btn .prev",
+        nextEl: ".be_juni .next",
+        prevEl: ".be_juni .prev",
     }
 });
 
@@ -219,12 +203,13 @@ const beaccSwiper = new Swiper('.best_acc .c_swiper3',{
 //  4. 탭제목 1 클래스 적용
 const tabC2 = document.querySelectorAll('.row4 .best_container > div');
 const tabT2 = document.querySelectorAll('.row4 .t_btm .item_tab a');
+
 console.log(tabC2, tabT2);
-for(let i of tabC2){
-    function tabCHide2 (){ /* 탭내용 모두 숨기기용 함수 : 생성 */
-        for(let i of tabC2) i.style.display = 'none';
-    }
+
+function tabCHide2 (){ /* 탭내용 모두 숨기기용 함수 : 생성 */
+    for(let i of tabC2) i.style.display = 'none';
 }
+
 function tabClsReset2(){/* 클래스 초기화 함수 : 생성 */
     for(let i of tabT2) i.classList.remove('active');
 }
@@ -251,3 +236,42 @@ tabT2.forEach((target,index)=>{
         e.preventDefault();
     })
 })
+
+// =====================================================  5행 스크롤업
+// 탭 메뉴를 클릭하면 해당 섹션으로 이동하는 JS
+// 1. 탭 메뉴를 선택하면
+// 2. 해당되는 탭 내용으로 스크롤된다
+
+const golfTab = document.querySelector('.row5_tab a:nth-child(1)');
+const runTab = document.querySelector('.row5_tab a:nth-child(2)');
+const yogaTab = document.querySelector('.row5_tab a:nth-child(3)');
+const rowCon = document.querySelectorAll('.row5')
+console.log(golfTab,runTab,yogaTab);
+console.log(rowCon[0],rowCon[1],rowCon[2])
+
+golfTab.addEventListener('click',(e)=>{
+    e.preventDefault();
+    console.log('골프 섹션 offsetTop:', rowCon[0].offsetTop);
+    window.scrollTo({
+        left:0, 
+        top:rowCon[0].offsetTop
+    });
+});
+
+runTab.addEventListener('click',(e)=>{
+    e.preventDefault();
+    console.log('요가 섹션 offsetTop:', rowCon[1].offsetTop);
+    window.scrollTo({
+        left:0, 
+        top:rowCon[1].offsetTop
+    });
+});
+
+yogaTab.addEventListener('click',(e)=>{
+    e.preventDefault();
+    console.log('러닝 섹션 offsetTop:', rowCon[2].offsetTop);
+    window.scrollTo({
+        left:0, 
+        top:rowCon[2].offsetTop
+    });
+});

@@ -53,34 +53,30 @@ main .m_row .c_swiper .swiper-wrapper > * .price del {
     color: #AAA; font-size: 0.81rem; line-height: 1.2; letter-spacing: -0.02rem;
     padding-left: 10px;
 }
-/* =================================================== 3행 신상 스와이퍼 2*/
-main .m_row .tab_container .all .c_swiper2 {} 
-main .m_row .tab_container .womanz .c_swiper2 {} 
-main .m_row .tab_container .manz .c_swiper2 {} 
-main .m_row .tab_container .under .c_swiper2 {} 
-main .m_row > * .c_swiper2 {
+/* =================================================== 스와이퍼 2*/
+main .m_row .c_swiper2 {
     display: flex; flex-flow: row nowrap; justify-content: space-between;
     margin: 40px 0;
 }
-main .m_row > * .c_swiper2 .swiper-wrapper {}
-main .m_row > * .c_swiper2 .swiper-wrapper .swiper-slide {
+main .m_row .c_swiper2 .swiper-wrapper {}
+main .m_row .c_swiper2 .swiper-wrapper .swiper-slide {
     display: flex; flex-flow: row nowrap; justify-content: space-between;
 }
-main .m_row > * .c_swiper2 .swiper-wrapper > * h3 {
+main .m_row .c_swiper2 .swiper-wrapper > * h3 {
     font-size: 0.94rem; font-weight: 500; letter-spacing: -0.02rem;
 }
-main .m_row > * .c_swiper2 .swiper-wrapper > * .i_txt {
+main .m_row .c_swiper2 .swiper-wrapper > * .i_txt {
     font-size: 0.81rem; line-height: 1.2; letter-spacing: -0.02rem;
     padding: 10px 0 20px;
 }
-main .m_row > * .c_swiper2 .swiper-wrapper > * .price {
+main .m_row .c_swiper2 .swiper-wrapper > * .price {
     letter-spacing: -0.02rem;
 }
-main .m_row > * .c_swiper2 .swiper-wrapper > * .price del {
+main .m_row .c_swiper2 .swiper-wrapper > * .price del {
     color: #AAA; font-size: 0.81rem; line-height: 1.2; letter-spacing: -0.02rem;
     padding-left: 10px;
 }
-/* =================================================== 4행 베스트셀러 스와이퍼 2*/
+/* =================================================== 스와이퍼 2*/
 main .m_row .c_swiper3 {
     display: flex; flex-flow: row nowrap; justify-content: space-between;
     margin: 40px 0;
