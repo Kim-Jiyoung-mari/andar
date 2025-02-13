@@ -1,8 +1,14 @@
-// const aClick = document.querySelectorAll('nav a');
-// console.log(aClick)
-// aClick.addEventListener('click',(e) => {
-//     
-// })
+document.querySelectorAll('main > * a').forEach(a => {
+    a.addEventListener('click', (e) => {
+        e.preventDefault();
+    });
+});
+
+document.querySelectorAll('nav > * a').forEach(a => {
+    a.addEventListener('click', (e) => {
+        e.preventDefault();
+    });
+});
 
 const mainSwiper = new Swiper('.main_swiper',{
     autoplay:{
