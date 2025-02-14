@@ -103,3 +103,37 @@ tabT.forEach((target,index)=>{
         e.preventDefault();
     })
 })
+
+// 주문수량 + 주문금액 JS
+// 변수 설정 → 초기값 : 주문수량 = 0개 / 주문 금액 = 0원 => 개당 75,000원
+let price = 75000; // 초기 주문 금액
+let number = 0; // 초기 주문 수량
+let totalPrice = 0; // 최종 가격을 저장하는 변수
+const product_num = document.querySelector('#product_num') ; //수량표시 DOM
+const plusBtn = document.querySelector('#plus'); //수량증가버튼 DOM
+const minusBtn = document.querySelector('#minus'); //수량감소버튼 DOM
+const orderPrice = document.querySelector('.order_price .or_price');
+
+console.log(price, number, totalPrice, product_num, plusBtn, minusBtn, orderPrice);
+
+//초기값 설정 : 주문수량 0개 + 주문금액 0원 표시
+product_num.value = number;
+orderPrice.textContent = price*number;
+//금액 값에 단위구분 넣기
+orderPrice.textContent = Number(price*number).toLocaleString('ko-kr');
+
+//수량 증가버튼
+plusBtn.addEventListener('click',()=>{
+    number++;
+    product_num.value = number;
+    totalPrice = price*number;
+    orderPrice.textContent = totalPrice.toLocaleString('ko-kr');
+})
+
+//수량 감소버튼
+minusBtn.addEventListener('click',()=>{
+    number <= 1 ? alert('최소구매수량입니다.') :number--;
+    product_num.value = number;
+    totalPrice = price*number;
+    orderPrice.textContent = totalPrice.toLocaleString('ko-kr');
+})
