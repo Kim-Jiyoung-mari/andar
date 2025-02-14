@@ -132,10 +132,9 @@ main .contents .right_info .op_bg .op2 {}
 main .contents .right_info .op_bg > * .item_name {
     font-size: 0.88rem; letter-spacing: -0.02rem; padding-bottom: 5px;
 }
-main .contents .right_info .op_bg > * .item_op {
+main .contents .right_info .op_bg > * span {
     font-size: 0.81rem; line-height: 1.2; letter-spacing: -0.02rem;
 }
-main .contents .right_info .op_bg > * .item_op span {}
 main .contents .right_info .op_bg .count {
     text-align: right;
 }

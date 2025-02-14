@@ -137,3 +137,53 @@ minusBtn.addEventListener('click',()=>{
     totalPrice = price*number;
     orderPrice.textContent = totalPrice.toLocaleString('ko-kr');
 })
+
+// ===================================================== 옵션선택
+// 0. 초기값 display = none;
+const opBack = document.querySelector('.op_bg');
+opBack.style.display = 'none'
+// 1-1. 선택 1 의 사이즈 선택
+// 1-2. 선택 1 의 컬러 선택
+// 1-3. 제품명 선택
+const item = document.querySelector('.title_price h1');//제품명 = 제품명은 태그 선택하는거 아니고 그 안에 있는 내용을 선택 해야 하니까 innerText
+const selectSize1 = document.querySelector('#size1');// 선택 1의 사이즈
+const selectColor1 = document.querySelector('#color1');// 선택 1의 컬러
+const opSize1 = document.querySelectorAll('#size1 option');
+const opColor1 = document.querySelectorAll('#color1 option');
+// 선택 1의 출력 위치 저장
+const itemName = document.querySelector('.op1 .item_name');
+const sizeOp1 = document.querySelector('.op1 .size_op1');
+const colorOp1 = document.querySelector('.op1 .color_op1');
+selectSize1.addEventListener('change',()=>{
+    const size1 = document.querySelector('#size1 option:checked').value; // 저장할 변수
+    itemName.textContent = item.innerText;
+    sizeOp1.textContent = `${size1} , `;
+});
+
+selectColor1.addEventListener('change',()=>{
+    const color1 = document.querySelector('#color1 option:checked').value;
+    colorOp1.textContent = color1;
+    opBack.style.display = 'block'
+});
+
+// 2-1. 선택 2 의 사이즈 선택
+// 2-2. 선택 2 의 컬러 선택
+const selectSize2 = document.querySelector('#size2');// 선택 1의 사이즈 셀렉트
+const selectColor2 = document.querySelector('#color2');// 선택 1의 사이즈 셀렉트
+const opSize2 = document.querySelectorAll('#size2 option');
+const opColor2 = document.querySelectorAll('#color2 option');
+//출력될 위치
+const itemName2 = document.querySelector('.op2 .item_name');
+const sizeOp2 = document.querySelector('.op2 .size_op2');
+const colorOp2 = document.querySelector('.op2 .color_op2');
+//셀렉트
+selectSize2.addEventListener('change',()=>{
+    const size2 = document.querySelector('#size2 option:checked').value;
+    itemName2.textContent = item.innerText;
+    sizeOp2.textContent = `${size2} , `;
+});
+selectColor2.addEventListener('change',()=>{
+    const color2 = document.querySelector('#color2 option:checked').value;
+    colorOp2.textContent = color2;
+    opBack.style.display = 'block'
+});
