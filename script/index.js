@@ -242,36 +242,38 @@ tabT2.forEach((target,index)=>{
 // 1. 탭 메뉴를 선택하면
 // 2. 해당되는 탭 내용으로 스크롤된다
 
-const golfTab = document.querySelector('.row5_tab a:nth-child(1)');
-const runTab = document.querySelector('.row5_tab a:nth-child(2)');
-const yogaTab = document.querySelector('.row5_tab a:nth-child(3)');
-const rowCon = document.querySelectorAll('.row5')
+const golfTab = document.querySelector('.golf_tab a:nth-child(1)');
+const runTab = document.querySelector('.run_tab a:nth-child(2)');
+const yogaTab = document.querySelector('.yoga_tab a:nth-child(3)');
+const golfCon = document.querySelector('.golf');
+const runCon = document.querySelector('.running');
+const yogaCon = document.querySelector('.yoga');
 console.log(golfTab,runTab,yogaTab);
-console.log(rowCon[0],rowCon[1],rowCon[2])
+console.log(golfCon,runCon,yogaCon);
 
 golfTab.addEventListener('click',(e)=>{
     e.preventDefault();
-    console.log('골프 섹션 offsetTop:', rowCon[0].offsetTop);
+    console.log('골프 섹션 offsetTop:', golfCon.offsetTop);
     window.scrollTo({
         left:0, 
-        top:rowCon[0].offsetTop
+        top:golfCon.offsetTop
     });
 });
 
 runTab.addEventListener('click',(e)=>{
     e.preventDefault();
-    console.log('요가 섹션 offsetTop:', rowCon[1].offsetTop);
+    console.log('러닝 섹션 offsetTop:', runCon.offsetTop);
     window.scrollTo({
         left:0, 
-        top:rowCon[1].offsetTop
+        top:runCon.offsetTop
     });
 });
 
 yogaTab.addEventListener('click',(e)=>{
     e.preventDefault();
-    console.log('러닝 섹션 offsetTop:', rowCon[2].offsetTop);
+    console.log('요가 섹션 offsetTop:', yogaCon.offsetTop);
     window.scrollTo({
         left:0, 
-        top:rowCon[2].offsetTop
+        top:yogaCon.offsetTop
     });
 });
